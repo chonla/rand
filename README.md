@@ -46,9 +46,14 @@ Usage of rand:
     num : numeric (0-9)
     alphanum : alphanumeric (a-z + 0-9, lowercase)
     alphanumcase : alphanumeric with case-sensitive (a-z + A-Z + 0-9)
-    hex : hexeric (0-9 + a-f, lowercase)
-    hexcase : hexeric with case-sensitive (0-9 + a-f + A-F)
+    hex : hexadecimal (0-9 + a-f, lowercase)
+    hexcase : hexadecimal with case-sensitive (0-9 + a-f + A-F)
+    binary : binary string
     custom : custom data set, use -e to specify entries in data set
+
+  possible alternative output format:
+    base64 : encode randomized string into base64 string
+    hex : encode randomized string into hexadecimal string
 ```
 
 ## Example
@@ -71,6 +76,9 @@ qqgNqJgstDNwEdYYc49CYGI25UUELH2I6gftSf2n
 
 $ rand -d custom -e 123abc -l 32
 accbacb32aa1c1caa12a112c22cbb331
+
+$ rand -d binary -l 32 -o base64
+CwRuKV0kXYC7pN1pESrUdewcdfnNw44/xCRys3iKV5g=
 ```
 
 ## License
